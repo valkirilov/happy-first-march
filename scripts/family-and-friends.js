@@ -111,7 +111,7 @@ function step2() {
     setTimeout(function() { applyMoreToElement(she, { translateX: "550px", rotate: "13deg" }); }, ELEMENT_STEP_DURATION*2) // Push her to the left again
     
     // Move during the song
-    setTimeout(function() { she.addClass('shake'); document.getElementById('she').style.marginLeft = '450px'; }, ELEMENT_STEP_DURATION*3);
+    setTimeout(function() { she.addClass('shake'); document.getElementById('she').style.marginLeft = '480px'; }, ELEMENT_STEP_DURATION*3);
     
     setTimeout(step3, 26000);
 };
@@ -140,7 +140,7 @@ function step4() {
     setTimeout(function() { applyMoreToElement(he, { translateX: "-100px", rotate: "13deg" }); }, ELEMENT_STEP_DURATION*2) // Push her to the left again
     
     // Move during the song
-    setTimeout(function() { he.addClass('shake'); document.getElementById('he').style.marginLeft = '0px'; }, ELEMENT_STEP_DURATION*3);
+    setTimeout(function() { he.addClass('shake'); document.getElementById('he').style.marginLeft = '-130px'; }, ELEMENT_STEP_DURATION*3);
     
     setTimeout(step5, 24000);
 };
@@ -162,8 +162,8 @@ function step5() {
     setTimeout(function() { applyMoreToElement(he, { translateX: "0px", rotate: "0deg" }); }, ELEMENT_STEP_DURATION*1)
     
     // And start shaking them again
-    setTimeout(function() { she.addClass('shake'); document.getElementById('she').style.marginLeft = '450px'; }, ELEMENT_STEP_DURATION*2);
-    setTimeout(function() { he.addClass('shake'); document.getElementById('he').style.marginLeft = '0px'; }, ELEMENT_STEP_DURATION*2);
+    setTimeout(function() { she.addClass('shake'); document.getElementById('she').style.marginLeft = '480px'; }, ELEMENT_STEP_DURATION*2);
+    setTimeout(function() { he.addClass('shake'); document.getElementById('he').style.marginLeft = '-130px'; }, ELEMENT_STEP_DURATION*2);
     
     setTimeout(step6, 3000);
 }
@@ -185,15 +185,12 @@ function step6() {
 // Changing colors an hiding the text
 function step7() {
     console.log('Step 7: Prepare the final');
-    
-    // Change their colors
-    she.attr('src', 'images/she-white.png');
-    he.attr('src', 'images/he-red.png');
-    
+        
     final.fadeIn('slow');
     
     she.removeClass('shake');
     he.removeClass('shake');
+    she.fadeOut();
     
     setTimeout(step8, 3000);
 };
@@ -207,9 +204,7 @@ function step8() {
     applyMoreToElement(final, { translateY: "60px" }); 
     
     // And the make them together
-    setTimeout(function() { applyMoreToElement(she, { translateX: "-160px", rotate: "-6deg" }); }, ELEMENT_STEP_DURATION*0) // Push her to the left a little
-    setTimeout(function() { applyMoreToElement(he, { translateX: "160px", rotate: "6deg" }); }, ELEMENT_STEP_DURATION*0) // Push him to the right a little
-    
-    setTimeout(function() { applyMoreToElement(she, { translateX: "-190px", rotate: "0deg" }); }, ELEMENT_STEP_DURATION*1) // Push her to the left a little
-    setTimeout(function() { applyMoreToElement(he, { translateX: "190px", rotate: "0deg" }); }, ELEMENT_STEP_DURATION*1) // Push him to the right a little
+    setTimeout(function() { applyMoreToElement(he, { translateX: "160px", rotate: "420deg" }); }, ELEMENT_STEP_DURATION*0) // Push him to the right a little
+
+    setTimeout(function() { applyMoreToElement(he, { translateX: "320px", rotate: "0deg" }); }, ELEMENT_STEP_DURATION*1) // Push him to the right a little
 };
