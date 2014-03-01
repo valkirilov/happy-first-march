@@ -59,7 +59,7 @@ function start() {
 }
 
 function backgroundToWhite() {
-    $('body').css('background-color', '#95a5a6'); // to white
+    $('body').css('background-color', '#bdc3c7'); // to white
 };
 function backgroundToRed() {
     $('body').css('background-color', '#e74c3c'); // to red
